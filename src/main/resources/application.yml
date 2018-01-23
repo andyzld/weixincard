@@ -1,0 +1,25 @@
+server:
+  port: 8080
+#  ssl:
+#    key-store: classpath:.keystore
+#    key-store-type: JKS
+#    key-alias: tomcat
+#    key-store-password: 111111
+##  servlet-path: /
+spring:
+  devtools:
+    restart:
+      additional-paths: src/main/java
+  datasource:
+    url: jdbc:mysql://localhost:3306/weixinCard?serverTimezone=CTT&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  thymeleaf:
+    cache: false
+#    type: com.alibaba.druid.pool.DruidDataSource
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml
+logging:
+  level:
+    com.zld.weixin.mapper: debug
